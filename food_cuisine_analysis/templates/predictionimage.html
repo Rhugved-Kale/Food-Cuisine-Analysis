@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Cuisine Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/noscript.css') }}">
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+					<span class="icon solid major fa-globe"></span>
+					<h1><strong>Cuisinize</strong></h1>
+					<p>Cuisinize utilizes image processing and machine learning to predict <br>the cuisine and report a set of recipes for a specific dish of food.</p>
+					<ul class="actions special">
+						<li><a href="/" class="button">Home</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+					<div>
+						<div>
+							<header class="major">
+								<h2>Let's TASTE our algorithm</h2>
+							</header>
+							<form method="post" action="/predict2">
+								<label><h3>Please provide the image URL</h3></label><br>
+        						<input type="text" name="imagelink"><br><br>
+        						<input type="submit" value="Predict"><br><br>
+    						</form>
+						</div>
+						<div>
+							<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+
+							{% if result %}
+							<image src={{ result[0][3] }} width="500" height=auto></image>
+							{% for i in range((result |length)) %}
+							<hr><br>
+							<strong><strong style="font-size:25px;">RECIPE {{i+1}}</strong></strong>
+							<header class="major"></header>
+							<p><strong><u>Dish</u> : </strong></p>
+							<p>{{result[i][0]}}</p>
+							<p><strong><u>Ingredients</u> : </strong></p>
+							<p>{{result[i][1]}}</p>
+							<p><strong><u>Steps for preparation</u> : </strong></p>
+							{% set x = result[i][2].split('.') %}
+							{% for j in range((x |length)-1) %}
+							<p>{{ j+1 }}{{ x[j] }}</p>
+							{% endfor %}
+							{% endfor %}
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2">
+				<div class="container">
+					<div class="row gtr-150">
+						<div class="col-6 col-12-medium">
+							<ul class="major-icons">
+								<li><span class="icon solid style1 major fa-glass-martini"></span></li>
+								<li><span class="icon solid style2 major fa-cookie"></span></li>
+								<li><span class="icon solid style3 major fa-hamburger"></span></li>
+								<li><span class="icon solid style4 major fa-fish"></span></li>
+								<li><span class="icon solid style5 major fa-beer"></span></li>
+								<li><span class="icon solid style6 major fa-pizza-slice"></span></li>
+							</ul>
+						</div>
+						<div class="col-6 col-12-medium">
+							<header class="major">
+								<h2>What is cuisinize?</h2>
+							</header>
+
+							<p align="justify">Globalization has added eclectic cuisines to our everyday lives. We constantly find ourselves having a wide variety of food composed of different ingredients and different ways of preparation. It would be good to know the cuisine of the dish we are having and what would be a good fit for us in our future cravings along with its recipe, ingredients, nutritional value, and some other features.</p>
+							<p align="justify">This approach if
+adopted by restaurant networks and food delivery apps would
+be a good strategy to attract and offer personalization to
+potential customers. Learning these applications motivated us
+to come up with this system of predicting and analyzing the
+cuisine of a plate of food given either its image or its list of
+ingredients.</p>
+							<p align="justify">This system aims at identifying the cuisine of a plate of
+food by using two different approaches. The first approach
+would require feeding in an image of the dish as an input and
+the second one would be feeding a list of the composing
+ingredients of the dish. The former approach would simply
+return the cuisine of the ingredients list in question along
+with the prediction accuracy while the latter approach
+would give us the predicted name of the cuisine, its list of
+composing ingredients, and the instructions/recipe to
+prepare the dish.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Three -->
+
+			<section id="three" class="main style1 special">
+				<div class="container">
+
+						<h2 align="left">About us</h2>
+						<hr>
+					<div class="row gtr-150">
+						<div class="col-6 col-12-medium" align="justify">
+							<p align="justify">We are final year undergraduate students pursuing computer engineering. Our manuscript, based on cuisinizer, has been published in
+								International Research Journal of Engineering and Technology (IRJET) Volume 9, Issue 4,  April 2022
+								<a href="https://www.irjet.net/volume9-issue4">https://www.irjet.net/volume9-issue4</a> S.No: 98.</p>
+							<u>Our contact details</u> :<br><br>
+							Rhugved Kale<br>
+							Email: <a href="kalerhura18ce@student.mes.ac.in">kalerhura18ce@student.mes.ac.in</a><br><br>
+							Sahil Batham<br>
+							Email: <a href="bathamsahsa18ce@student.mes.ac.in">bathamsahsa18ce@student.mes.ac.in</a> <br><br>
+							Prasad Badhan<br>
+							Email: <a href="badhanprara18ce@student.mes.ac.in ">badhanprara18ce@student.mes.ac.in </a> <br><br>
+							Varun MK<br>
+							Email: <a href="mkva18ce@student.mes.ac.in ">mkva18ce@student.mes.ac.in</a>  <br><br>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Cuisinize &#8482</li>
+				</ul>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
