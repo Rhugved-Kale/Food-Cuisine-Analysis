@@ -1,1 +1,5 @@
 # Food-Cuisine-Analysis
+
+Our project aims to identify the cuisine of food dishes by employing two distinct approaches. The first approach leverages cutting-edge image analysis techniques to analyze a photograph of the dish and determine its cuisine accurately. The second approach involves inputting a list of ingredients, utilizing advanced machine learning algorithms to predict the cuisine and provide a corresponding recipe for the dish. This innovative system holds tremendous potential for various stakeholders, including individuals, restaurant networks, and food delivery services.
+
+In summary, our project combines the power of image processing and machine learning techniques to deliver accurate and useful analysis of food cuisines. Its potential applications span across multiple sectors, benefitting individuals in their culinary exploration, assisting restaurant networks in enhancing their offerings, and supporting individuals with dietary restrictions in making informed decisions about their meals.
