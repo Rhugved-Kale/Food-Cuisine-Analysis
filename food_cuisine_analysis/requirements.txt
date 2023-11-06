@@ -10,3 +10,4 @@ lmdb
 tensorflow
 tensorboardX
 gunicorn
+flask
