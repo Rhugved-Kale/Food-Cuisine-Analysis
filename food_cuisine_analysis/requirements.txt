@@ -11,3 +11,4 @@ tensorflow
 tensorboardX
 gunicorn
 flask
+scikit-learn
