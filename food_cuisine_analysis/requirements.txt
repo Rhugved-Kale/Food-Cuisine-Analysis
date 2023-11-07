@@ -14,3 +14,4 @@ flask
 scikit-learn
 spacy
 joblib
+pandas
