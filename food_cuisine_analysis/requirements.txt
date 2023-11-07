@@ -11,7 +11,7 @@ tensorflow
 tensorboardX
 gunicorn
 flask
-scikit-learn
+scikit-learn==0.24.2
 spacy
 joblib
 pandas
