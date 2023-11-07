@@ -12,3 +12,5 @@ tensorboardX
 gunicorn
 flask
 scikit-learn
+spacy
+joblib
