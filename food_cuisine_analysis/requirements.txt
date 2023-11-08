@@ -24,3 +24,4 @@ tensorflow-hub==0.15.0
 tensorflow-io-gcs-filesystem==0.24.0
 torch==1.11.0
 torchvision==0.2.1
+typing_extensions==4.7.1
