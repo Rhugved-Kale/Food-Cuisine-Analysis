@@ -32,7 +32,7 @@ Boom!<br>
 -> Result: Get the name of the dish, its composing ingredients and its recipe!<br><br>
 
 
-I just Googled images of a Lasagna -> right click -> copy image address -> paste the link in the textbox
+I just Googled images of Lasagna -> right click -> copy image address -> paste the link in the textbox
 ![image](https://github.com/Rhugved-Kale/Food-Cuisine-Analysis/assets/86423298/07393aa8-815f-4b9d-a59f-db5482b335a3) <br>
 
 Double boom! (It might suggest multiple recipes based on its predictions)<br>
@@ -46,4 +46,4 @@ Double boom! (It might suggest multiple recipes based on its predictions)<br>
 
 -> Clone the repository to your local directory<br>
 -> Install the required packages (pip install -r requirements.txt)<br>
--> Run the application on localhost(python app.py)
+-> Run the application on localhost (python app.py)
