@@ -25,7 +25,10 @@ from io import BytesIO
 from sklearn.neighbors import DistanceMetric
 
 sys.modules['sklearn.neighbors._distance_metric'] = sklearn.neighbors._dist_metrics
-model = pickle.load('my_model.sav')
+# model = pickle.load('my_model.sav')
+file_path = 'my_model.sav'
+with open(file_path , 'rb') as f:
+    model = pickle.load(f)
 app = Flask(__name__)
 
 use_gpu = True
