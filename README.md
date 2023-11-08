@@ -9,7 +9,9 @@ In summary, our project combines the power of image processing and machine learn
 ### Here is our application 'Cuisinize'
 
 ![image](https://github.com/Rhugved-Kale/Food-Cuisine-Analysis/assets/86423298/f0c0bf50-e86a-4ccb-ad0b-4d9de37d3a74)
+
 <br>
+
 ### Function 1
 
 -> Input: A list of ingredients of a dish. <br>
@@ -33,7 +35,16 @@ Boom!<br>
 I just Googled images of a Lasagna -> right click -> copy image address -> paste the link in the textbox
 ![image](https://github.com/Rhugved-Kale/Food-Cuisine-Analysis/assets/86423298/07393aa8-815f-4b9d-a59f-db5482b335a3) <br>
 
-Double boom!<br>
+Double boom! (It might suggest multiple recipes based on its predictions)<br>
 ![image](https://github.com/Rhugved-Kale/Food-Cuisine-Analysis/assets/86423298/98a39229-e279-4816-9a08-98a7776dd75a)
 
 ![image](https://github.com/Rhugved-Kale/Food-Cuisine-Analysis/assets/86423298/245ef771-aeed-48a0-ad55-8b291be4903d)
+
+<br>
+
+### Try it out yourself!
+
+-> Clone the repository to your local directory<br>
+-> Open the command prompt<br>
+-> Install the required packages (pip install -r requirements.txt)<br>
+-> Run the application (python app.py)
