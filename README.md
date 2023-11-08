@@ -45,6 +45,5 @@ Double boom! (It might suggest multiple recipes based on its predictions)<br>
 ### Try it out yourself!
 
 -> Clone the repository to your local directory<br>
--> Open the command prompt<br>
 -> Install the required packages (pip install -r requirements.txt)<br>
--> Run the application (python app.py)
+-> Run the application on localhost(python app.py)
