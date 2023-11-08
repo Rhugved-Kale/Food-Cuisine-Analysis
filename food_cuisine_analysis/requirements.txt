@@ -13,5 +13,5 @@ gunicorn
 flask
 scikit-learn==0.24.2
 spacy
-joblib
+joblib==1.3.2
 pandas
